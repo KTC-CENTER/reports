@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="formulaire-preinscription" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="011878c9-006f-428e-82df-5f93114a8562">
+	<parameter name="displayName" class="java.lang.String">
+		<parameterDescription><![CDATA[displayname for student]]></parameterDescription>
+	</parameter>
+	<parameter name="nationnalite" class="java.lang.String">
+		<parameterDescription><![CDATA[Nationnality for student]]></parameterDescription>
+	</parameter>
+	<parameter name="dateNaissance" class="java.util.Date">
+		<parameterDescription><![CDATA[Date de naissance de l'étudiant]]></parameterDescription>
+	</parameter>
+	<parameter name="lieuNaissance" class="java.lang.String">
+		<parameterDescription><![CDATA[Lieu de naissance de l'étudiant]]></parameterDescription>
+	</parameter>
+	<parameter name="phone" class="java.lang.String">
+		<parameterDescription><![CDATA[Student phone number]]></parameterDescription>
+	</parameter>
+	<parameter name="email" class="java.lang.String">
+		<parameterDescription><![CDATA[Student email adress]]></parameterDescription>
+	</parameter>
+	<parameter name="diplome" class="java.lang.String">
+		<parameterDescription><![CDATA[Diplome actuelle de l'étudiant]]></parameterDescription>
+	</parameter>
+	<parameter name="noteObtenue" class="java.lang.Float">
+		<parameterDescription><![CDATA[Note obteension du diplome]]></parameterDescription>
+	</parameter>
+	<parameter name="anneeObtension" class="java.lang.Integer">
+		<parameterDescription><![CDATA[Année d'obtension du diplome]]></parameterDescription>
+	</parameter>
+	<parameter name="etablissementObtension" class="java.lang.String">
+		<parameterDescription><![CDATA[Etablissement d'obtension du diplome]]></parameterDescription>
+	</parameter>
+	<parameter name="filiereChoisie1" class="java.lang.String"/>
+	<parameter name="filiereChoisie2" class="java.lang.String"/>
+	<parameter name="filiereChoisie3" class="java.lang.String"/>
+	<parameter name="niveauFormationPreinscript" class="java.lang.String"/>
+	<parameter name="session" class="java.lang.String">
+		<parameterDescription><![CDATA[Année academique]]></parameterDescription>
+	</parameter>
+	<parameter name="piedPage" class="java.lang.String">
+		<parameterDescription><![CDATA[Pied de page de l'institution]]></parameterDescription>
+	</parameter>
+	<parameter name="enteteGauche" class="java.lang.String">
+		<parameterDescription><![CDATA[Entete gauche]]></parameterDescription>
+	</parameter>
+	<parameter name="enteteDroite" class="java.lang.String">
+		<parameterDescription><![CDATA[Entete Droite]]></parameterDescription>
+	</parameter>
+	<parameter name="logo" class="java.lang.String">
+		<parameterDescription><![CDATA[Logo de l'institution]]></parameterDescription>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="100" splitType="Stretch">
+			<image hAlign="Center">
+				<reportElement x="246" y="0" width="65" height="60" uuid="40cafee8-aa0a-49af-9aa5-02b89c6400ee"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="0" width="181" height="81" uuid="d853d106-65cf-449a-9985-7fec405c4eff"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{enteteGauche}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="375" y="0" width="181" height="81" uuid="e7f85b0b-1d4a-4387-a8d9-13ccede6a9b4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{enteteDroite}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<line>
+				<reportElement positionType="Float" x="7" y="50" width="540" height="1" backcolor="#FF9705" uuid="71f079fc-dcb6-4f01-994e-5430d0b87bb5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Solid" lineColor="#FC8A0F"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="7" y="0" width="538" height="40" uuid="1838ef6d-f6de-4fc2-9351-5b0d8095a74a">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="335" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="552" height="334" uuid="cc588944-98d2-431f-a899-379eac677eae">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box padding="0">
+					<pen lineWidth="1.5" lineStyle="Solid"/>
+				</box>
+				<staticText>
+					<reportElement x="16" y="20" width="184" height="20" uuid="0861faed-804d-4e5e-b6e0-d7c634b68960"/>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[NOM-Prénom / SURNAME-First name :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="48" width="120" height="20" uuid="3c43feae-8a4d-4373-a2a6-d7f9156570f2">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Nationalité / Nationality :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="76" width="154" height="20" uuid="3639ed5c-ed98-4d28-b9b4-b06ba7b3b066">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Date de naissance / Date of birth :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="104" width="94" height="20" uuid="9a3ed1ff-8dfa-4de4-bdd8-bbbf5fb3b1eb">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Téléphone / Phone :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="159" width="519" height="20" uuid="addc25d6-4e99-499f-9adb-0e93fb6673fc">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Diplômes actuelles, note d'obtention, année du diplôme, établissement / Current degrees, graduation grade, year of degree, institution]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="241" y="76" width="159" height="20" uuid="9d1517b2-b151-41e5-a943-ff5819ab8ca5">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Lieu de naissance / Place of birth :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="212" y="104" width="176" height="20" uuid="734f2f70-f8ee-4b7e-8e1b-dca6def9e494">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Adresse électronique/ E-mail address :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="137" width="225" height="20" uuid="e9630681-5260-4f1c-a2f5-5bc502af6669">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Parcours académique / Academic background :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="216" width="264" height="20" uuid="15dfb434-8a04-4c79-9023-46da82b62fb6">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle"/>
+					<text><![CDATA[Je souhaite m’inscrire en / I would like to register in :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="237" width="20" height="20" uuid="bd9c1b85-99aa-4b49-be97-59e029b962c8">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[1. ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="16" y="310" width="92" height="20" uuid="9da37588-ded8-4e33-bf4b-29f6f290116b">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Le niveau / Level :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="261" width="20" height="20" uuid="96db4364-a262-4b3a-b56d-4b25c429dd30">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[2. ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="30" y="286" width="20" height="20" uuid="e259b44c-ef93-4bb8-b6c3-45f8e6d1a904">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[3. ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="200" y="20" width="344" height="20" uuid="ce77da92-d156-4447-95d5-f139a216a1eb"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{displayName}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="137" y="48" width="406" height="20" uuid="323b31d0-aa99-42af-950d-9b831f8402a5">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{nationnalite}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="171" y="76" width="70" height="20" uuid="3aee3fd4-a589-460b-98b3-9902d8b9a715">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{dateNaissance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="401" y="76" width="142" height="20" uuid="fd274bb6-b0c7-4f83-a0c1-015d1ef8ae49">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{lieuNaissance}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="110" y="104" width="102" height="20" uuid="a2fbc2d5-3478-4632-8f6c-5a18760facac">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{phone}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="389" y="104" width="154" height="20" uuid="d72da6ec-9b82-44f5-a164-5bbf906939c0">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{email}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="17" y="180" width="154" height="34" uuid="71205f77-1b23-42f8-ad70-cf071e771791">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[$P{diplome}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="181" y="180" width="48" height="34" uuid="1971a0c7-3901-4466-a350-a8735d357c52">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[$P{noteObtenue}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="233" y="180" width="76" height="34" uuid="be03da6a-d581-4422-8104-99698635fa48">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[$P{anneeObtension}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="314" y="180" width="228" height="34" uuid="53989fce-38a7-402b-bbb8-a27939cf77b7">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression><![CDATA[$P{etablissementObtension}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="50" y="237" width="490" height="20" uuid="923733f5-f51e-4002-9417-31a6a9149682">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{filiereChoisie1}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="50" y="261" width="490" height="20" uuid="70c8171e-49ed-4db7-ba36-7ab9883d0593">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{filiereChoisie2}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="50" y="286" width="490" height="20" uuid="5de354e3-1da6-44e5-b241-8d1f84b85f52">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{filiereChoisie3}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="111" y="310" width="146" height="20" uuid="78dde807-3144-4a28-a6b0-a430b6aa1717">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{niveauFormationPreinscript}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="401" y="310" width="138" height="20" uuid="b74703b6-d73c-4f8b-96ff-05b1224a21ad">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					</reportElement>
+					<textElement textAlignment="Left" verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$P{session}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="261" y="310" width="140" height="20" uuid="1a076a01-a6bd-4275-82dd-a740c69b5322">
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Année académique / Academic year :]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="122" splitType="Stretch">
+			<staticText>
+				<reportElement x="54" y="8" width="436" height="24" forecolor="#C79714" uuid="9e24fef7-acaf-4243-a9d3-10ca2be0f323">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[P.J: une copie du dernier diplôme, photocopie légalisée du relevé des notes et un acte de naissance P.J: a copy of the last diploma, legalized photocopy of the transcript and a birth certificate.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="36" width="556" height="38" forecolor="#FFFFFF" backcolor="#FF8000" uuid="cb0f5597-6977-45c8-9248-526c58d4d211"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[N.B Le présent document ne peut en aucun cas remplacer l'inscription définitive This document cannot in any way replace the definitive registration]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="94" width="495" height="21" uuid="c494af4a-e9e1-43d8-9515-82b1351883fd"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{piedPage}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
